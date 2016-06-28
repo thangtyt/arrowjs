@@ -545,14 +545,14 @@ function handleComponentRouteSetting(arrow, componentRouteSetting, defaultRouteC
     Object.keys(componentRouteSetting).map(function (path_name) {
         //Check path_name
         /* istanbul ignore next */
-        let routePath = path_name[0] === "/" ? path_name : "/" + componentName + "/" + path_name;
+        let routePath = path_name[0] === path.sep ? path_name : path.sep + componentName + path.sep + path_name;
 
         //handle prefix
         /* istanbul ignore if */
-        if (defaultRouteConfig.prefix && defaultRouteConfig.prefix[0] !== "/") {
-            defaultRouteConfig.prefix = "/" + defaultRouteConfig.prefix
+        if (defaultRouteConfig.prefix && defaultRouteConfig.prefix[0] !== path.sep) {
+            defaultRouteConfig.prefix = path.sep + defaultRouteConfig.prefix
         }
-        let prefix = defaultRouteConfig.prefix || "/";
+        let prefix = defaultRouteConfig.prefix || path.sep;
 
         let arrayMethod = Object.keys(componentRouteSetting[path_name]).filter(function (method) {
             if (componentRouteSetting[path_name][method].name) {
@@ -683,22 +683,21 @@ function makeRender(req, res, application, componentView, componentName, compone
     return function (view, options, callback) {
 
         var done = callback;
-        var opts =  {};
+        var opts = options || {};
 
         //remove flash message
         delete req.session.flash;
-
-        // merge res.locals
-        _.assign(opts, application.locals);
-        _.assign(opts, res.locals);
 
         // support callback function as second arg
         /* istanbul ignore if */
         if (typeof options === 'function') {
             done = options;
-        } else {
-            _.assign(opts, options);
+            opts =  {};
         }
+        // merge res.locals
+        _.assign(opts, res.locals);
+        _.assign(opts, application.locals);
+
         // default callback to respond
         done = done || function (err, str) {
             if (err) return req.next(err);

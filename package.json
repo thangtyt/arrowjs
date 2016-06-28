@@ -1,6 +1,6 @@
 {
   "name": "arrowjs",
-  "version": "0.4.3",
+  "version": "0.4.1",
   "description": "ArrowJS framework for Node.js",
   "main": "index.js",
   "scripts": {
@@ -58,23 +58,23 @@
     "sinon-chai": "^2.8.0",
     "supertest": "^1.1.0"
   },
-  "gitHead": "5c84d325967c8a4ceb2ab44df4fb492c528a6b35",
+  "gitHead": "bb01cd9ecb22ee8e35f0c13af8976595781dd342",
   "bugs": {
     "url": "https://github.com/arrowjs/ArrowjsCore/issues"
   },
   "homepage": "https://github.com/arrowjs/ArrowjsCore#readme",
-  "_id": "arrowjs@0.4.3",
-  "_shasum": "2f414b53a00009b8840f68993f75f0796eee193a",
+  "_id": "arrowjs@0.4.1",
+  "_shasum": "7df016edcdabbb004c92d14ec5775ac4fd350c14",
   "_from": "arrowjs@*",
-  "_npmVersion": "3.6.0",
-  "_nodeVersion": "5.7.0",
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.1",
   "_npmUser": {
     "name": "trquoccuong",
     "email": "trquoccuong@gmail.com"
   },
   "dist": {
-    "shasum": "2f414b53a00009b8840f68993f75f0796eee193a",
-    "tarball": "http://registry.npmjs.org/arrowjs/-/arrowjs-0.4.3.tgz"
+    "shasum": "7df016edcdabbb004c92d14ec5775ac4fd350c14",
+    "tarball": "http://registry.npmjs.org/arrowjs/-/arrowjs-0.4.1.tgz"
   },
   "maintainers": [
     {
@@ -90,10 +90,6 @@
       "email": "trquoccuong@gmail.com"
     }
   ],
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/arrowjs-0.4.3.tgz_1457354920243_0.3809590523596853"
-  },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/arrowjs/-/arrowjs-0.4.3.tgz"
+  "_resolved": "https://registry.npmjs.org/arrowjs/-/arrowjs-0.4.1.tgz"
 }
